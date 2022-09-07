@@ -1,0 +1,11 @@
+# Import the forex python library
+from forex_python.converter import CurrencyRates
+c = CurrencyRates()
+# User inputs for currency converter
+user_amount = int(input("Enter the amount you want to convert: "))
+from_currency = input("Enter the currency code that has to be converted: ").upper() #USD,INR,GBP
+to_currency = input("Enter the currency code to convert: ").upper() #USD,INR,GBP
+#Printing the O/P
+#print("You are converting", amount, from_currency, "to", to_currency,".")
+output = c.convert(from_currency, to_currency, user_amount)
+print("The converted rate is:", int(output))
